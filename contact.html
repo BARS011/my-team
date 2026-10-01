@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myteam | Find the best talent</title>
+  <title>myteam | Contact Us</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   
   <!-- Google Fonts: Livvic -->
@@ -25,7 +25,7 @@
       </svg>
     </button>
     <nav class="mobile-nav-links">
-      <a href="index.html" class="active">home</a>
+      <a href="index.html">home</a>
       <a href="about.html">about</a>
     </nav>
     <a href="contact.html" class="btn btn-outline-white">contact us</a>
@@ -40,7 +40,7 @@
         </a>
         <nav class="desktop-nav" aria-label="Main Navigation">
           <ul>
-            <li><a href="index.html" class="active">home</a></li>
+            <li><a href="index.html">home</a></li>
             <li><a href="about.html">about</a></li>
           </ul>
         </nav>
@@ -60,110 +60,72 @@
   </header>
 
   <main>
-    <!-- Home Hero Section -->
-    <section class="home-hero">
+    <!-- Contact Section -->
+    <section class="contact-section">
       <div class="container">
-        <div class="hero-grid">
-          <h1 class="heading-xl hero-title">
-            Find the best <span class="coral-text">talent</span>
-          </h1>
-          <div class="hero-text-col">
-            <div class="hero-accent-bar" aria-hidden="true"></div>
-            <p class="body-1 hero-description">
-              Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="contact-grid">
+          <!-- Left Column: Info & Ask Us About -->
+          <div class="contact-info-col">
+            <h1 class="heading-lg">Contact</h1>
+            <h2 class="contact-subtitle">Ask us about</h2>
 
-    <!-- Features Section ("Build & manage...") -->
-    <section class="features-section">
-      <div class="container">
-        <div class="features-grid">
-          <div class="features-header">
-            <div class="features-accent-bar" aria-hidden="true"></div>
-            <h2 class="heading-md features-title">
-              Build &amp; manage distributed teams like no one else.
-            </h2>
-          </div>
-
-          <div class="features-list">
-            <div class="feature-item">
-              <img src="images/icon-person.svg" alt="" class="feature-icon" width="72" height="72">
-              <div class="feature-text">
-                <h3 class="heading-sm">Experienced Individuals</h3>
-                <p>Our network is made up of highly experienced professionals who are passionate about what they do.</p>
+            <div class="contact-benefits">
+              <div class="contact-benefit-item">
+                <img src="images/icon-person.svg" alt="" class="benefit-icon" width="72" height="72">
+                <p class="benefit-text">The quality of our talent network</p>
               </div>
-            </div>
 
-            <div class="feature-item">
-              <img src="images/icon-cog.svg" alt="" class="feature-icon" width="72" height="72">
-              <div class="feature-text">
-                <h3 class="heading-sm">Easy to Implement</h3>
-                <p>Our processes have been refined over years of implementation meaning our teams always deliver.</p>
+              <div class="contact-benefit-item">
+                <img src="images/icon-cog.svg" alt="" class="benefit-icon" width="72" height="72">
+                <p class="benefit-text">Usage &amp; implementation of our software</p>
               </div>
-            </div>
 
-            <div class="feature-item">
-              <img src="images/icon-chart.svg" alt="" class="feature-icon" width="72" height="72">
-              <div class="feature-text">
-                <h3 class="heading-sm">Enhanced Productivity</h3>
-                <p>Our customized platform with in-built analytics helps you manage your distributed teams.</p>
+              <div class="contact-benefit-item">
+                <img src="images/icon-chart.svg" alt="" class="benefit-icon" width="72" height="72">
+                <p class="benefit-text">How we help drive innovation</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-      <div class="container">
-        <h2 class="heading-md testimonials-title">
-          Delivering real results for top companies. Some of our <span class="rapture-text">success stories.</span>
-        </h2>
+          <!-- Right Column: Interactive Form -->
+          <div class="contact-form-col">
+            <!-- Success Alert Notification -->
+            <div id="formSuccess" class="form-success-banner" role="alert">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Thank you! Your message has been sent successfully.</span>
+            </div>
 
-        <div class="testimonials-grid">
-          <!-- Card 1 -->
-          <div class="testimonial-card">
-            <p class="testimonial-quote">
-              “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”
-            </p>
-            <h3 class="testimonial-author">Kady Baker</h3>
-            <p class="testimonial-role">Product Manager at Bookmark</p>
-            <img src="images/avatar-kady.jpg" alt="Kady Baker" class="testimonial-avatar" width="62" height="62" loading="lazy">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Name" aria-label="Name" required>
+                <span class="error-message">This field is required</span>
+              </div>
+
+              <div class="form-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" aria-label="Email Address" required>
+                <span class="error-message">This field is required</span>
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="company" name="company" class="form-control" placeholder="Company Name" aria-label="Company Name">
+              </div>
+
+              <div class="form-group">
+                <input type="text" id="title" name="title" class="form-control" placeholder="Title" aria-label="Title">
+              </div>
+
+              <div class="form-group">
+                <textarea id="message" name="message" class="form-control" placeholder="Message" rows="4" aria-label="Message" required></textarea>
+                <span class="error-message">This field is required</span>
+              </div>
+
+              <div class="submit-btn-wrapper">
+                <button type="submit" class="btn btn-primary">submit</button>
+              </div>
+            </form>
           </div>
-
-          <!-- Card 2 -->
-          <div class="testimonial-card">
-            <p class="testimonial-quote">
-              “We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”
-            </p>
-            <h3 class="testimonial-author">Aiysha Reese</h3>
-            <p class="testimonial-role">Founder of Manage</p>
-            <img src="images/avatar-aiysha.jpg" alt="Aiysha Reese" class="testimonial-avatar" width="62" height="62" loading="lazy">
-          </div>
-
-          <!-- Card 3 -->
-          <div class="testimonial-card">
-            <p class="testimonial-quote">
-              “Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”
-            </p>
-            <h3 class="testimonial-author">Arthur Clarke</h3>
-            <p class="testimonial-role">Co-founder of MyPhysio</p>
-            <img src="images/avatar-arthur.jpg" alt="Arthur Clarke" class="testimonial-avatar" width="62" height="62" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ready to get started Banner (CTA) -->
-    <section class="cta-banner">
-      <div class="container">
-        <div class="cta-content">
-          <h2 class="heading-md cta-title">Ready to get started?</h2>
-          <a href="contact.html" class="btn btn-outline-dark">contact us</a>
         </div>
       </div>
     </section>
